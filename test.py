@@ -1,3 +1,5 @@
+import random
+
 password = '8888'
 chances = 3
 while chances > 0:
@@ -13,13 +15,14 @@ while chances > 0:
             choice = int(input("Enter your choice: "))
             if choice == 1:
                 topup = int(input("Enter your balance: "))
+                monitrr = random.randint(1,50)
                 if topup > 0:
-                    balance = balance + topup
+                    balance = balance + topup + monitrr
                     print("Your new balance is: ", balance)
             elif choice == 2:
                 deposit = int(input("Enter your balance: "))
                 if deposit <= balance:
-                    balance = balance - deposit
+                    balance = balance - deposit + monitrr
                     print("Your new balance is: ", balance)
                 else:
                     print("Insufficient funds")
@@ -34,10 +37,13 @@ while chances > 0:
     else:
         chances -= 1
         if chances > 0:
-            print("Wrong pin! you have:",chances,"Attempts left")
+            print("Wrong pin! you have:", chances, "Attempts left")
         else:
-            print("Sorry you have:",chances,"Attempts left")
+            print("Sorry you have:", chances, "Attempts left")
             break
-        
+
+
+
+
 
 
