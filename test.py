@@ -1,6 +1,4 @@
-user_name = input("Write ur name u pendejo:")
-print("whats this name amigo?? ur so pendejo amigo.",user_name)
-if user_name.isdigit():
-    break
-else:
-    continue
+user_password = input('Pls enter your password:')
+user_password = str(user_password)
+hiding = "*" * len(user_password)
+print("your password is",hiding)
