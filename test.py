@@ -1,3 +1,18 @@
+password = '8888'
+chances = 3
+while chances > 0:
+    user_pin = input('Enter 4 digit PIN:')
+    if user_pin == password:
+        print("Correct!")
+        break
+    else:
+        chances -= 1
+        if chances > 0:
+            print("Wrong pin! you have:",chances,"Attempts left")
+        else:
+            print("Sorry you have:",chances,"Attempts left")
+
+
 balance = 100 # start with 100 manat as bonus from israel
 while True:
     print("1. Top up balance")
