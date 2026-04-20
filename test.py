@@ -7,8 +7,9 @@ while True:
     choice = int(input("Enter your choice: "))
     if choice == 1:
         topup = int(input("Enter your balance: "))
-        balance = balance + topup
-        print("Your new balance is: ", balance)
+        if topup  > 0:
+            balance = balance + topup
+            print("Your new balance is: ", balance)
     elif choice == 2:
         deposit = int(input("Enter your balance: "))
         if deposit <= balance:
@@ -21,3 +22,5 @@ while True:
     elif choice == 4:
        print("Goodbye, Gay!")
        break
+    else:
+        print("Invalid choice")
