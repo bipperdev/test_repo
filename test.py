@@ -11,8 +11,11 @@ while True:
         print("Your new balance is: ", balance)
     elif choice == 2:
         deposit = int(input("Enter your balance: "))
-        balance = balance - deposit
-        print("Your new balance is: ", balance)
+        if deposit <= balance:
+            balance = balance - deposit
+            print("Your new balance is: ", balance)
+        else:
+            print("Insufficient funds")
     elif choice == 3:
         print("Your balance is: ", balance)
     elif choice == 4:
