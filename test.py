@@ -22,7 +22,7 @@ while chances > 0:
             elif choice == 2:
                 deposit = int(input("Enter your balance: "))
                 if deposit <= balance:
-                    balance = balance - deposit + monitrr
+                    balance = balance - deposit
                     print("Your new balance is: ", balance)
                 else:
                     print("Insufficient funds")
@@ -41,8 +41,6 @@ while chances > 0:
         else:
             print("Sorry you have:", chances, "Attempts left")
             break
-
-
 
 
 
